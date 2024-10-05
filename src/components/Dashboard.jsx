@@ -18,6 +18,7 @@ export default function Dashboard() {
 
             <input type="text" onChange={(e)=> searchQuery = e.target.value}/>
         </div>
+        {/* drawer */}
         <button onClick={methodWOParam}>Notes</button>
         <br /><br />
         <button onClick={() => handleNavigation('/archive')}>Archive</button>

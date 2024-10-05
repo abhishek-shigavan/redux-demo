@@ -2,14 +2,14 @@ import { useDispatch } from "react-redux";
 import { removeNoteFromList } from "../utils/store/notesSlice";
 
 export default function NoteCard(props) {
-    const { noteDetails, updateList } = props
+    const { noteDetails, updateList, container } = props
     console.log(noteDetails);
     const dispatch = useDispatch();
     // dispatch(clearCart());
     const handleDelete = () => {
         console.log(noteDetails);
-        // updateList(noteDetails)
-        dispatch(removeNoteFromList())
+        updateList(noteDetails, 'delete')
+        // dispatch(removeNoteFromList())
     }
 
     return(
